@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+
+
+/*登陆页面header*/
+#login-header-container{
+	background: #f2f2f2;
+	overflow: hidden;
+}
+#login-header{
+	width: 1200px;
+	margin: 20px auto;
+	overflow: hidden;
+	position: relative;
+}
+#login-header .header-logo{
+	float: left;
+}
+#login-header .wellcome{
+	float: left;
+	width: 155px;
+	height: 56px;
+	line-height: 56px;
+	text-align: center;
+	border-left: 1px solid #999999;
+	margin-left: 40px;
+	font-size: 26px;
+}
+
+/*登陆页面中部*/
+#login-main-body{
+	overflow: hidden;
+	background: url(../img/login/login-bg.jpg) center no-repeat;
+}
+#main-container{
+	width: 1100px;
+	margin: 0 auto;
+	height: 480px;
+	/*padding: 50px 80px;*/
+	overflow: hidden;
+	position: relative;
+}
+#main-container .login-form{
+	width: 345px;
+	overflow: hidden;
+	/*float: right;*/
+	background: white;
+	padding: 30px 20px;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+}
+#main-container .login-form:nth-child(2){
+	right: 500px;
+}
+#main-container .login-form .title span:nth-child(1){
+	font-size: 18px;
+	color: #686565;
+	font-weight: bold;
+}
+#main-container .login-form .title span:nth-child(2){
+	float: right;
+	color: #999999;
+}
+#main-container .login-form .title span:nth-child(2) a{
+	color: #137ce9;
+}
+.login-form-container{
+	padding-top: 30px;
+}
+#main-container .login-form .account{
+	background: #f9f9f9;
+	padding: 10px 0px;
+}
+#main-container .login-form .account{
+	margin: 10px 0px;
+}
+#main-container .login-form .account-icon{
+	width: 40px;
+	height: 38px;
+	float: left;
+	background: url(../img/login/login_icon.png) 10px -118px no-repeat;
+}
+.account:nth-child(2) .account-icon{
+	background: url(../img/login/login_icon.png) 10px -175px no-repeat !important;
+}
+.account:nth-child(3) .account-icon{
+	background: url(../img/login/login_icon.png) 10px -403px no-repeat !important;
+}
+.account:nth-child(4) .account-icon{
+	background: url(../img/login/login_icon.png) 10px -298px no-repeat !important;
+}
+/*#account{
+	width: 250px;
+	padding: 5px 0px;
+	outline: medium;
+	border: none;
+	background: #f9f9f9;
+}*/
+.input-account{
+	width: 250px;
+	padding: 5px 0px;
+	outline: medium;
+	border: none;
+	background: #f9f9f9;
+}
+.login-form .pullbox{
+	width: 345px;
+	height: 40px;
+	background: #f29dba;
+	position: relative;
+}
+.login-form .pullbox .arrow{
+	width: 52px;
+	height: 34px;
+	background: url(../img/login/arrow-right.png) 0px 0px no-repeat;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	cursor: pointer;
+}
+.login-form .pullbox .text{
+	line-height: 38px;
+	padding-left: 105px;
+	font-size: 18px;
+	color: white;
+}
+.login-form .autologin{
+	padding: 20px 0px;
+	color: #9F9F9F;
+}
+.login-form .autologin span{
+	display: inline-block;
+	margin-right: 20px;
+}
+.login-form .autologin a{
+	float: right;
+}
+#regi-submitBtn, #login-submitBtn{
+	background: #e5004b;
+	padding: 15px 140px;
+	border: none;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+}
+.login-form .identify-account{
+	width: 170px !important;
+}
+.login-form .identify-code{
+	width: 100px !important;
+}
+#call-phone{
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/globalStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		
+	</head>
+	<body>
+		
+		<div id="login-container">
+			<!--登陆页面header-->
+			<div id="login-header-container">
+				<div id="login-header">
+					<div class="header-logo">
+						<img src="img/login/logo.jpg"/>
+					</div>
+					<div class="wellcome">
+						欢迎登陆
+					</div>
+				</div>
+			</div>
+			
+			<!--登陆页面中部-->
+			<div id="login-main-body">
+				<div id="main-container">
+					
+					<!--登陆界面-->
+					<div class="login-form">
+						<div class="title">
+							<span>会员登陆</span>
+							<span>没有速普账号？<a href="#">立即注册</a></span>
+						</div>
+						<form action="" method="post" class="login-form-container">
+							<div class="account">
+								<div class="account-icon"></div>
+								<input type="text" id="login-account" class="input-account" placeholder="邮箱、手机号、账号" value="" />
+							</div>
+							<div class="account">
+								<div class="account-icon"></div>
+								<input type="password" id="login-pwd" class="input-account" placeholder="密码" value="" />
+							</div>
+							<div class="pullbox">
+								<div class="arrow"></div>
+								<div class="text">
+									拖住滑块滑动到最后边
+								</div>
+							</div>
+							<div class="autologin">
+								<input type="checkbox" name="" id="remember" value="" /><span>记住用户名</span>
+								<input type="checkbox" name="" id="autologin" value="" /><span>自动登录</span>
+								<a href="#">忘记密码？</a>
+							</div>
+							<div class="submit">
+								<input type="button" id="login-submitBtn" value="登    陆" />
+							</div>
+						</form>
+					</div>
+					
+					<!--注册界面-->
+					<div class="login-form">
+						<div class="title">
+							<span>用户注册</span>
+							<span>已有账号？<a href="#">立即登陆</a></span>
+						</div>
+						<form action="" method="post" class="login-form-container">
+							<div class="account">
+								<div class="account-icon"></div>
+								<input type="text" id="regi-account" class="input-account" placeholder="邮箱、手机号" value="" />
+							</div>
+							<div class="account">
+								<div class="account-icon"></div>
+								<input type="password" id="regi-pwd" class="input-account" placeholder="6-16位字符，必须包含英文字母和数字" value="" />
+							</div>
+							<div class="account identify-account">
+								<div class="account-icon"></div>
+								<input type="password" id="regi-identifyCode" class="input-account identify-code" placeholder="输入验证码" value="" />
+							</div>
+							<div class="account identify-account">
+								<div class="account-icon "></div>
+								<input type="password" id="regi-phoneCode" class="input-account identify-code" placeholder="输入手机验证码" value="" />
+								
+							<!--</div><input type="button" id="call-phone" value="获取验证码" />-->
+							<div class="submit">
+								<input type="button" id="regi-submitBtn" value="注    册" />
+							</div>
+						</form>
+					</div>
+				
+				</div>
+			</div>
+			
+			
+			<!--登陆页面footer-->
+			
+		</div>
+		
+	</body>
+</html>
