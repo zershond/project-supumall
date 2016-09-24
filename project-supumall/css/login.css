@@ -37,7 +37,7 @@
 	margin: 0 auto;
 	height: 480px;
 	/*padding: 50px 80px;*/
-	overflow: hidden;
+	/*overflow: hidden;*/
 	position: relative;
 }
 #main-container .login-form{
@@ -52,6 +52,8 @@
 }
 #main-container .login-form:nth-child(2){
 	right: 500px;
+	opacity: 0;
+	display: none;
 }
 #main-container .login-form .title span:nth-child(1){
 	font-size: 18px;
@@ -67,6 +69,7 @@
 }
 .login-form-container{
 	padding-top: 30px;
+	position: relative;
 }
 #main-container .login-form .account{
 	background: #f9f9f9;
@@ -119,6 +122,10 @@
 	top: 3px;
 	cursor: pointer;
 }
+.login-form .pullbox .check{
+	background: url(../img/login/check.png) 0px 0px no-repeat;
+	
+}
 .login-form .pullbox .text{
 	line-height: 38px;
 	padding-left: 105px;
@@ -150,8 +157,26 @@
 .login-form .identify-code{
 	width: 100px !important;
 }
+.f{
+	float: left;
+}
 #call-phone{
-	float: right;
+	padding: 10px 50px;
+	background: #e5004b;
+	border: none;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	top: 213px;
+	left: 190px;
+}
+#code{
+	padding: 10px 100px;
+	font-size: 14px;
+	font-weight: bold;
+	position: absolute;
+	top: 155px;
+	left: 150px;
 }
 
 
