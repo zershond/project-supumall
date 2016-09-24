@@ -1,13 +1,28 @@
 $(function(){
+	
+	//引入头部
 	$('#header').load('heater.html',function(data){
-		$(this).html(data);
+//		$(this).html(data);
+		console.log(window.location.href);
+		//若有传过来用户名密码，则登录
+		if($.cookie('autologin') == '1'){
+			process();
+		}
+		
+		//退出按钮绑定执行函数
+		$("#quit").click(function(){
+			$.cookie('autologin','0');
+			window.location.href = 'index.html';
+		})
+		
 	});
 	
+	
+	//引入脚部
 	$('#footer').load('footer.html',function(data){
 		$(this).html(data);
 	});
 	
-//	$('.special-zone-container').clone().appendTo('#special-zone')
 
 //swiper js
 	 var swiper1 = new Swiper('#index-swiper .swiper-container', {
@@ -64,3 +79,44 @@ $(function(){
 		$(this).stop().animate({left: 0});
 	})
 })
+
+
+function process(){
+	var account = $.cookie('account');
+	console.log();
+	//Hi 130*****331 欢迎来到速普商城！ [ 退出 ] 
+	var str = 'hi  <a href="#">';
+	str = str + account + '</a> 欢迎来到速普商城！ [ <a id="quit" href="#">退出</a> ]';
+	$('.header-title span').eq(0).html(str);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,9 @@
 
 $(function(){
 	
+	//如果已经登录，在左上角显示登录用户信息
+//	$('.header-title span:eq(0)').html();
+	
 	$('.nav-menu-info').each(function(){
 		$(this).hide();
 	})

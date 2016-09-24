@@ -1,8 +1,8 @@
 {
 	"login":[
-		{"account":"zershond","pwd":"123456"},
-		{"account":"tom","pwd":"654321"},
-		{"account":"jack","pwd":"654321"},
-		{"account":"alex","pwd":"654321"}
+		{"account":"zershond@qq.com","pwd":"123456"},
+		{"account":"tom@outlook.com","pwd":"654321"},
+		{"account":"jack@outlook.com","pwd":"654321"},
+		{"account":"alex@outlook.com","pwd":"654321"}
 	]
 }

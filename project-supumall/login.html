@@ -6,7 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="css/globalStyle.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="libs/jquery-validation-1.14.0/dist/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery-cookie/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery-validation-1.15.0/dist/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery-validation-1.15.0/dist/jquery.validate.extend.methods.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery-validation-1.15.0/dist/jquery.metadata.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery-validation-1.15.0/dist/localization/messages_zh.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -61,7 +65,7 @@
 					</div>
 					
 					<!--注册界面-->
-					<div class="login-form">
+					<div id="register" class="login-form">
 						<div class="title">
 							<span>用户注册</span>
 							<span>已有账号？<a href="#">立即登陆</a></span>
@@ -69,25 +73,26 @@
 						<form action="" id="regi-form" method="post" class="login-form-container">
 							<div class="account">
 								<div class="account-icon"></div>
-								<input type="text" id="regi-account" class="input-account" placeholder="邮箱、手机号" value="" />
+								<input type="text" id="regiAccount" class="input-account" placeholder="邮箱、手机号" value="" />
 							</div>
 							<div class="account">
 								<div class="account-icon"></div>
-								<input type="password" id="regi-pwd" class="input-account" placeholder="6-16位字符，必须包含英文字母和数字" value="" />
+								<input type="password" id="regiPwd" class="input-account" placeholder="6-16位字符，必须包含英文字母和数字" value="" />
 							</div>
 							<div class="account identify-account">
 								<div class="account-icon"></div>
-								<input type="password" id="regi-identifyCode" class="input-account identify-code" placeholder="输入验证码" value="" />
+								<input type="text" id="regiIdentifyCode" class="input-account identify-code" placeholder="输入验证码" value="" />
 							</div>
 							<div id="code">1234</div>
 							<div class="account identify-account">
 								<div class="account-icon "></div>
-								<input type="password" id="regi-phoneCode" class="input-account identify-code" placeholder="输入手机验证码" value="" />
+								<input type="password" id="regiPhoneCode" class="input-account identify-code" placeholder="输入手机验证码" value="" />
 								
 							</div><input type="button" id="call-phone" value="获取验证码" />
 							<div class="submit">
-								<input type="button" id="regi-submitBtn" value="注    册" />
+								<input type="button" id="regiSubmitBtn" value="注    册" />
 							</div>
+							<div id="errorMsg">错误信息</div>
 						</form>
 					</div>
 				

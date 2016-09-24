@@ -36,6 +36,7 @@
 	position: absolute;
 	top: 20px;
 	left: 0px;
+	z-index: 100;
 	background: black;
 	display: none;
 	z-index: 10;
@@ -53,6 +54,7 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	display: none;
+	z-index: 100;
 }
 .header-info li .mobileApp li{
 	margin: 5px 0;
@@ -151,7 +153,7 @@
 	margin-top: 20px;
 	padding-left: 50px;
 	position: relative;
-	border-bottom: 2px solid #e5004a;
+	
 	z-index: 10;
 }
 .nav-allClass{
@@ -223,6 +225,7 @@
 	position: absolute;
 	top: 30px;
 	right: 50px;
+	z-index: -1;
 }
 
 .nav-menu-info{

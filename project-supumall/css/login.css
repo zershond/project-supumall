@@ -143,7 +143,7 @@
 .login-form .autologin a{
 	float: right;
 }
-#regi-submitBtn, #login-submitBtn{
+#regiSubmitBtn, #login-submitBtn{
 	background: #e5004b;
 	padding: 15px 140px;
 	border: none;
@@ -179,6 +179,17 @@
 	left: 150px;
 }
 
+/*注册错误信息提示*/
+#errorMsg{
+	padding: 2px 20px;
+	line-height: 20px;
+	height: 0px;
+	overflow: hidden;
+	background: url(../img/login/login_icon.png) 0px -240px no-repeat;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+}
 
 
 
