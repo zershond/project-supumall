@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+	ul{padding:0;margin:0;list-style: none;}
+	a{color:#333;text-decoration: none;}
+	a:hover{text-decoration: underline;}
+	.bigPic img{width:200px;}
+	/*=S zoom big pic */
+.jqzoom{display:inline-block;position:relative;cursor:move;}
+div.zoomdiv{
+z-index                 :100;
+position                :absolute;
+top:0px;
+left:0px;
+width                   :200px;
+height                  :200px;
+background:#fff;
+border:1px solid #ccc;
+display:none;
+text-align:center;
+overflow:hidden;
+}
+div.jqZoomPup{
+z-index                 :10;
+visibility              :hidden;
+position                :absolute;
+top:0px;
+left:0px;
+width                   :50px;
+height                  :50px;
+border:1px solid #aaa;
+background:#fff url(zoom.gif) 50% top  no-repeat;
+opacity:.5;
+-moz-opacity:.5;
+-khtml-opacity:.5;
+filter:alpha(Opacity=50);
+
+}
+    </style>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery.jqzoom/jquery.jqzoom.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    $(function(){
+    	//放大功能
+	  	$(".bigPic").jqueryzoom({
+		  xzoom: 500,//放大区域宽度
+		  yzoom: 500,//放大区域高度
+		  preload: 1,//是否显示预加载
+		  offset:10,//放大区域偏离小图的距离
+		  position: "right",//放大区域显示的位置（left,right）
+		  lens:true //是否显示小图上的透明区域
+	  });
+    })
+    </script>
+</head>
+
+<body>
+	<!-- 
+		src:放置小图路径
+		jqimg:放置大图路径
+		(大图小图比例越大放大镜效果越明显)
+	 -->
+   <div class="bigPic jqzoom"><img src="img/01_mid.jpg" jqimg="img/01.jpg"></div>
+</body>
+
+</html>

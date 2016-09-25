@@ -23,6 +23,7 @@
 }
 .header-info li a{
 	color: white;
+	float: left;
 }
 .header-info li div{
 	width: 10px;

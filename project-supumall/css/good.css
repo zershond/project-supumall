@@ -8,6 +8,206 @@
 	/*z-index: 100;*/
 }
 
+/*主体部分*/
+.warp1200{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*放大镜部分样式*/
+.bigPic img{
+	width:480px;
+}
+.bigPic .zoomdiv{
+	width: 355px;
+	height: 355px;
+}
+.bigPic .zoomdiv img{
+	width: 1000px;
+}
+	/*=S zoom big pic */
+.jqzoom{display:inline-block;position:relative;cursor:move;}
+	div.zoomdiv{
+	z-index:100;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:200px;
+	height:200px;
+	background:#fff;
+	border:1px solid #ccc;
+	display:none;
+	text-align:center;
+	overflow:hidden;
+}
+div.jqZoomPup{
+	z-index:10;
+	visibility:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:50px;
+	height:50px;
+	border:1px solid #aaa;
+	background:#fff url(zoom.gif) 50% top  no-repeat;
+	opacity:.5;
+	-moz-opacity:.5;
+	-khtml-opacity:.5;
+	filter:alpha(Opacity=50);
+}
+.smallImg{
+	padding-left: 60px;
+}
+.smallImg img{
+	width: 65px;
+	margin-left: 15px;
+	border: 1px solid lightgray;
+}
+
+
+/*主要信息栏*/
+#main-container{
+	overflow: hidden;
+}
+
+#main-info .main-img{
+	float: left;
+	width: 480px;
+	/*height: 480p;*/
+}
+#main-info .good-info{
+	width: 710px;
+	overflow: hidden;
+	float: left;
+}
+.main-info-container {
+	/*width: 1200px;*/
+	overflow: hidden;
+}
+#main-info .info-title{
+	/*width: 750px;*/
+	background: url(../img/good/flag.jpg) 0 0 no-repeat;
+	padding: 17px 0px;
+	padding-left: 70px;
+	font-size: 18px;
+	color: #c4c4c4;
+}
+
+.main-info-container .buyIcon{
+	width: 34px;
+	height: 41px;
+	float: right;
+	background: url(../img/good/buy.png) 0 0 no-repeat;
+}
+.detail-info{
+	color: #666666;
+	font-size: 13px;
+}
+.detail-info h3{
+	line-height: 50px;
+	color: #666666;
+	font-size: 18px;
+	font-weight: bold;
+}
+.detail-info p{
+	line-height: 20px;
+	color: #666666;
+	font-size: 13px;
+}
+.detail-info .infoTab{
+	margin-top: 30px;
+}
+.detail-info .infoTab td{
+	padding: 12px 0px;
+	padding-right: 50px;
+	font-size: 13px;
+}
+.detail-info .infoTab td:first-child span{
+	font-size: 24px;
+	font-weight: bold;
+	color: #E5004B;
+}
+.detail-info .infoTab td:nth-child(2) span{
+	font-size: 13px;
+}
+.detail-info .infoTab td:nth-child(2) span a{
+	text-decoration: line-through;
+}
+.detail-info .count-info{
+	width: 60px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	vertical-align: bottom;
+}
+.count-opa{
+	font-size: 20px !important;
+	display: inline-block;
+	font-weight: bold;
+	padding:2px 7px;
+	margin: 0px 10px;
+	cursor: pointer;
+	border: 1px solid gray;
+}
+/*//加入购物车按钮*/
+#add-container{
+	margin-top: 35px;
+	overflow: hidden;
+}
+#add-mallCar{
+	padding:10px 50px;
+	background: #e5004a;
+	border: none;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 100px;
+	cursor: pointer;
+}
+#buyByApp{
+	padding: 10px 50px;
+	border: 1px solid gray;
+	font-size: 18px;
+	margin-left: 30px;
+	cursor: pointer;
+	background: white;
+}
+#share-container{
+	padding: 10px 10px;
+	padding-left: 73px;
+	overflow: hidden;
+}
+#share-container .text{
+	float: left;
+	margin-right: 10px;
+}
+#share-container .iconImg{
+	float: left;
+	width: 16px;
+	height: 16px;
+	background: url(../img/good/icons.png) 0px -1612px no-repeat;
+}
+#share-container .iconImg:nth-child(3){
+	background: url(../img/good/icons.png) 0px -104px no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

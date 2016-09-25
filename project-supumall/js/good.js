@@ -24,6 +24,34 @@ $(function(){
 	});
 	
 	
+//	放大镜执行函数
+	$(".bigPic").jqueryzoom({
+		xzoom: 355,//放大区域宽度
+		yzoom: 355,//放大区域高度
+		preload: 1,//是否显示预加载
+		offset:10,//放大区域偏离小图的距离
+		position: "right",//放大区域显示的位置（left,right）
+		lens:true //是否显示小图上的透明区域
+	});
+	//切换放大镜图片
+	$('.smallImg img').mouseenter(function(){
+		var src = $(this).attr('src');
+		$('img',$('.bigPic')).attr('src',src).attr('jqimg',src);
+	})
+	
+	
+	//点击增加购买数量
+	$('.count-opa').click(function(){
+		var opa = $(this).html();
+		var count = $('#count').val();
+		if(opa =='+'){
+			$('#count').val((parseInt(count)+1));
+		}else{
+			$('#count').val((parseInt(count)-1));
+		}
+	});
+	
+	
 })
 
 
