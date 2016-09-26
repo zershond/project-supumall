@@ -15,4 +15,8 @@ a{
 
 img{
 	margin: 0;
+	cursor: pointer;
+}
+body{
+	/*width: 1200px;*/
 }

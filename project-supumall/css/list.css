@@ -27,21 +27,31 @@
 	width: 210px;
 	height: 310px;
 	border: 4px solid #F88CB7;
+	position: relative;
 }
 .list-item .title{
-	height: 20px;
+	height: 45px;
 	overflow: hidden;
 	border-top: 1px dashed darkgray;
-	border-bottom: 1px dashed darkgray;
+	/*border-bottom: 1px dashed darkgray;*/
 	padding-left: 10px;
 	margin-top: 15px;
 	color: #666666;
 	line-height: 20px;
+	overflow: hidden;
+	position: absolute;
+	top: 210px;/*190*/
+	z-index: -10;
 }
 .list-item .price{
+	width: 198px;
 	padding-left: 10px;
 	padding-top: 10px;
+	border-top: 1px dashed darkgray;
 	overflow: hidden;
+	position: absolute;
+	bottom: 0px;
+	background: white;
 }
 .list-item .price span{
 	line-height: 15px;
@@ -51,6 +61,28 @@
 	color: #CB0101;
 	font-size: 18px;
 	margin-top: 10px;
+}
+.listContainer .save-money{
+	width: 77px;
+	height: 77px;
+	text-align: center;
+	line-height: 77px;
+	font-size: 16px;
+	color: white;
+	background: url(../img/list/bg.png) 0 0 no-repeat;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.listContainer .disable{
+	width: 142px;
+	height: 142px;
+	position: absolute;
+	top: 45px;
+	left: 30px;
+	z-index: 100;
+	display: none;
+	background: url(../img/list/empty.png) 0px 0px transparent;
 }
 
 .pager-container{

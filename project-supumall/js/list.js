@@ -36,8 +36,8 @@ $(function(){
 		$(this).html(data);
 	});
 	
-	//console.log(123)
-	getPage(1);
+//	默认加载第一页
+//	getPage(1);
 	
 //	翻页按钮特效
 	$('.pager').click(function(){
@@ -58,7 +58,9 @@ $(function(){
 		getPage(index);
 	})
 	
-	
+	$('.listContainer').hover(function(event){
+		
+	})
 
 	
 	
@@ -69,7 +71,7 @@ $(function(){
 
 function getPage(index){
 	var page = 'listDataPage' + index;
-	var str = '<div class="list-item"><img src="img/list/list1-1.jpg"/><div class="title">方广 乖乖小馒头香蕉味15g</div><div class="price"><span>市场价：￥1.8</span><h3>速普特惠价：￥1</h3></div></div>'
+	var str = '<div class="list-item"><img src="img/list/list1-1.jpg"/><div class="title">方广 乖乖小馒头香蕉味15g</div><div class="price"><span>市场价：￥1.8</span><h3>速普特惠价：￥1</h3></div><div class="save-money">省44%</div><div class="disable"></div></div>'
 	$('.listContainer').html(str)
 	$.get('data/list.json',function(data){
 		var len = data[page].length;
@@ -80,6 +82,9 @@ function getPage(index){
 			obj.find('.price').find('span').html(data[page][i]['price1']);
 			obj.find('.price').find('h3').html(data[page][i]['price2']);
 			obj.appendTo('.listContainer');
+			if(i == 5){
+				obj.find('.disable').show();
+			}
 		}
 	})
 }

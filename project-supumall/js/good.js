@@ -67,8 +67,8 @@ $(function(){
 			
 			
 		},'json');
-		if(province == '北京'){
-			$('#freightCount').html('免运费    预计正常3-5个工作日送达');
+		if(province == '西藏自治区'){
+			$('#freightCount').html('该地区不能免运费    按正常快递收费');
 		}else{
 			$('#freightCount').html('免运费    预计正常3-5个工作日送达');
 		}
@@ -78,11 +78,15 @@ $(function(){
 	$('.count-opa').click(function(){
 		var opa = $(this).html();
 		var count = $('#count').val();
+		var points = parseInt($('#points').html());
 		if(opa =='+'){
 			$('#count').val((parseInt(count)+1));
+			points += 83;
 		}else{
 			$('#count').val((parseInt(count)-1));
+			points -= 83;
 		}
+		$('#points').html(points);
 	});
 	
 	//点击添加购物车
@@ -114,7 +118,7 @@ $(function(){
 	//滚动条滚动时
 $(window).scroll(function(){
 	var top = $(window).scrollTop();
-	if(top >= 800){
+	if(top >= 950){
 		$('.more-info-title').css({
 			position: 'fixed',
 			top: 0

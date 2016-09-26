@@ -70,6 +70,9 @@ div.jqZoomPup{
 	margin-left: 15px;
 	border: 1px solid lightgray;
 }
+.smallImg img:hover{
+	border: 1px solid #e5004a;
+}
 
 
 /*主要信息栏*/
@@ -179,6 +182,19 @@ div.jqZoomPup{
 	cursor: pointer;
 	background: white;
 }
+#add-container .collection{
+	display: inline-block;
+	/*background: url(../img/index.png) -83px -539px no-repeat;*/
+	
+	padding-left: 10px;
+}
+#add-container .collection i{
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	background: url(../img/index.png) -80px -539px no-repeat;
+	vertical-align: middle;
+}
 #share-container{
 	padding: 10px 10px;
 	padding-left: 73px;
@@ -219,7 +235,6 @@ div.jqZoomPup{
 #main-info .hotSale h3{
 	font-size: 18px;
 	line-height: 25px;
-	
 }
 .hotSale .hotImg{
 	padding: 10px 0px;
@@ -238,13 +253,30 @@ div.jqZoomPup{
 	margin-left: 10px;
 }
 
+/*热卖活动*/
+.hot-activity{
+	float: right;
+	padding-bottom: 20px;
+}
+.hot-activity h3{
+	font-size: 18px;
+	color: #E5004B;
+	padding: 15px 10px;
+}
+.hot-activity img{
+	width: 300px;
+	margin-right: 15px;
+}
+
 /*商品详情*/
 .more-info{
-	width: 920px;
+	width: 950px;
 	float: right;
+	/*padding: 10px;
+	border: 1px solid gray;*/
 }
 .more-info-title{
-	width: 740px;
+	width: 930px;
 	overflow: hidden;
 	background: white;
 }
