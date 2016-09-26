@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>陈志纯-详情页</title>
 		<link rel="stylesheet" type="text/css" href="css/globalStyle.css"/>
 		<link rel="stylesheet" type="text/css" href="css/good.css"/>
 		
@@ -23,6 +23,8 @@
 					<div class="position-title">
 						<a href="#">首页</a> ><a href="#">1段</a>><a href="#"> Karicare可瑞康 新西兰金装奶粉1段0-6个月900g</a>
 					</div>
+					
+					<!--主要信息栏-->
 					<div class="main-info-container">
 						<div class="buyIcon"></div>
 						<div class="main-img">
@@ -66,7 +68,20 @@
 									</tr>
 									<tr>
 										<td>运费</td>
-										<td></td>
+										<td>
+											<div class="freight">
+												<span>至</span>
+												<select id="province" name="province">
+													<option value="">请选择省份</option>
+													<option value="北京">北京</option>
+													<option value="广东">广东</option>
+												</select>
+												<select id="city" name="city">
+													<option value="">请选择城市</option>
+												</select>
+												<span id="freightCount"></span>
+											</div>
+										</td>
 									</tr>
 									<tr>
 										<td>购买数量</td>
@@ -74,6 +89,7 @@
 											<span class="count-opa">-</span>
 											<input type="text" id="count" class="count-info" value="2" />
 											<span class="count-opa">+</span>
+											<i>2 件起售赠送 166 积分</i>
 										</td>
 									</tr>
 								</table>
@@ -86,6 +102,51 @@
 						</div>
 					</div>
 					
+					<!--热卖商品-->
+					<div class="hotSale">
+						<h3>热卖商品</h3>
+						<div class="hotImg">
+							<img src="img/good/hot1.jpg"/>
+							<div class="title">苏菲 超熟睡安心裤M 2片	</div>
+							<div class="price">￥11</div>
+						</div>
+						<div class="hotImg">
+							<img src="img/good/hot2.jpg"/>
+							<div class="title">nacnac宝贝可爱 婴儿洁肤湿巾	</div>
+							<div class="price">￥9.9</div>
+						</div>
+						<div class="hotImg">
+							<img src="img/good/hot3.jpg"/>
+							<div class="title">California baby加州宝宝 <br />美国金盏花面霜57g去湿疹	</div>
+							<div class="price">￥79.9</div>
+						</div>
+						<div class="hotImg">
+							<img src="img/good/hot4.jpg"/>
+							<div class="title">Childlife童年时光 美国婴幼儿<br />维生素D3补充液29.6ml	</div>
+							<div class="price">￥49</div>
+						</div>
+						<div class="hotImg">
+							<img src="img/good/hot5.jpg"/>
+							<div class="title">绵心 竹棉方格尿布五条装</div>
+							<div class="price">￥25</div>
+						</div>
+					</div>
+					
+					<!--商品详情-->
+					<div class="more-info">
+						<div class="more-info-title">
+							<ul>
+								<li class="active" a='moreInfo.html'><a>商品详情</a></li>
+								<li a='comment.html'><a>商品评论</a></li>
+								<li a='question.html'><a>常见问题</a></li>
+							</ul>
+							<input type="button" id="add-mallCar" value="加入购物车" />
+						</div>
+						<div style="clear: both;"></div>
+						<div class="more-info-container">
+							
+						</div>
+					</div>
 				</div>
 				
 				
@@ -93,7 +154,9 @@
 			
 			
 		</div>
-		
+		<div id="add-mallCar-img">
+			<img src="img/good/mainImg1.jpg"/>
+		</div>
 		<div style="clear: both;"></div>
 		<div id="footer"></div>
 	</body>

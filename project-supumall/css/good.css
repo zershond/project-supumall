@@ -1,14 +1,20 @@
 @charset "utf-8";
 
-
+body{
+	/*background: lightgray;*/
+}
 
 #header, #footer{
 	width: 1250px;
 	margin: 0 auto;
 	/*z-index: 100;*/
+	background: white;
 }
 
 /*主体部分*/
+#main-container{
+	background: white;
+}
 .warp1200{
 	width: 1200px;
 	margin: 0 auto;
@@ -17,16 +23,17 @@
 /*放大镜部分样式*/
 .bigPic img{
 	width:480px;
+	z-index: -10;
 }
 .bigPic .zoomdiv{
 	width: 355px;
 	height: 355px;
 }
-.bigPic .zoomdiv img{
+.zoomdiv img{
 	width: 1000px;
 }
 	/*=S zoom big pic */
-.jqzoom{display:inline-block;position:relative;cursor:move;}
+.jqzoom{display:inline-block;position:relative;cursor:move;z-index: 0;}
 	div.zoomdiv{
 	z-index:100;
 	position:absolute;
@@ -135,7 +142,7 @@ div.jqZoomPup{
 }
 .detail-info .count-info{
 	width: 60px;
-	height: 25px;
+	height: 28px;
 	text-align: center;
 	line-height: 25px;
 	vertical-align: bottom;
@@ -185,17 +192,95 @@ div.jqZoomPup{
 	float: left;
 	width: 16px;
 	height: 16px;
+	margin-right: 10px;
+	cursor: pointer;
 	background: url(../img/good/icons.png) 0px -1612px no-repeat;
 }
 #share-container .iconImg:nth-child(3){
 	background: url(../img/good/icons.png) 0px -104px no-repeat;
 }
+#share-container .iconImg:nth-child(4){
+	background: url(../img/good/icons.png) 0px -52px no-repeat;
+}
+#share-container .iconImg:nth-child(5){
+	background: url(../img/good/icons.png) 0px -2652px no-repeat;
+}
+#share-container .iconImg:nth-child(6){
+	background: url(../img/good/icons.png) 0px 0px no-repeat;
+}
 
 
+/*热卖商品*/
+#main-info .hotSale{
+	float: left;
+	padding: 10px 20px;
+	border: 1px solid gray;
+}
+#main-info .hotSale h3{
+	font-size: 18px;
+	line-height: 25px;
+	
+}
+.hotSale .hotImg{
+	padding: 10px 0px;
+	border-bottom: 1px solid gray;
+}
+.hotSale .hotImg .title{
+	padding-left: 30px;
+	margin: 20px 0px;
+}
+.hotSale .hotImg .price{
+	padding-left: 88px;
+	margin-bottom: 10px;
+}
+.hotSale .hotImg img{
+	width: 170px;
+	margin-left: 10px;
+}
+
+/*商品详情*/
+.more-info{
+	width: 920px;
+	float: right;
+}
+.more-info-title{
+	width: 740px;
+	overflow: hidden;
+	background: white;
+}
+.more-info-title input{
+	float: right ;
+	padding: 6px 40px !important;
+}
+.more-info-title ul li{
+	float: left;
+	padding: 5px 30px;
+	background: lightgray;
+	color: #666666;
+	cursor: pointer;
+}
+.more-info-title ul li a{
+	font-size: 18px !important;
+}
+.more-info-title .active{
+	background: white !important;
+	padding: 4px 30px;
+	border: 1px solid lightgray;
+}
 
 
-
-
+/*加入购物车动画图片*/
+#add-mallCar-img{
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+#add-mallCar-img img{
+	width: 75px;
+}
 
 
 
