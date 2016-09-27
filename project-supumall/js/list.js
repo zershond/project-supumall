@@ -37,7 +37,7 @@ $(function(){
 	});
 	
 //	默认加载第一页
-//	getPage(1);
+	getPage(1);
 	
 //	翻页按钮特效
 	$('.pager').click(function(){

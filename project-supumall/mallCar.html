@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>陈志纯-购物车页</title>
+		<link rel="stylesheet" type="text/css" href="css/globalStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mallCar.css"/>
+		
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mallCar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/jquery-cookie/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="header"></div>
+		<div style="clear: both;"></div>
+		
+		<div id="title-container">
+			<!--头部logo部分-->
+			<div id="header-container">
+				<div class="header-logo">
+					<a href="index.html"><img src="img/logo.jpg"/></a>
+				</div>
+				<div class="arrow-container">
+					<ul>
+						<li class="arrowActive">
+							<a href="#">
+								<span>1.我的购物车</span>
+								<span class="arrow"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>2.确认订单信息</span>
+								<span class="arrow"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>3.成功提交订单</span>
+								<span class="arrow"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<div style="clear: both;"></div>
+		<!--购物车部分-->
+		<div id="mallCar-container">
+			<div class="warp1200">
+				<div class="title">
+					<!--购物车标题-->
+					<div class="myMallCar">
+						<span></span>
+						我的购物车
+					</div>
+					<div class="continue">
+						<a href="list.html">继续购物   ></a>
+					</div>
+				</div>
+				<div class="mallCar-info">
+					<div class="container">
+					<!--购物车-->
+					<table id="mallCar-table"  cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="40">
+								<input type="checkbox"/>全选
+							</td>
+							<td>
+								商品信息
+							</td>
+							<td>
+								单价
+							</td>
+							<td>
+								数量
+							</td>
+							<td>
+								小计
+							</td>
+							<td>
+								操作
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" checked="checked"/>
+							</td>
+							<td>
+								<div class="good-info">
+									<img src="img/good/mainImg1.jpg"/>
+									<a href="#">Karicare可瑞康 新西兰金装奶粉1段0-6个月900g</a>
+								</div>
+								<div class="more-info">
+									<p>重量: 900g</p>
+									<p>适用年龄: 0-6个月</p>
+									<p>产地: 新西兰</p>
+								</div>
+							</td>
+							<td>
+								￥<span class="price">165</span>
+							</td>
+							<td>
+								<div class="count-container">
+									<span class="count-opa">-</span>
+									<input type="text" id="count" class="count-info" value="2" />
+									<span class="count-opa">+</span>
+								</div>
+							</td>
+							<td>
+								<span class="sum">￥<span class="sumPrice">330</span></span>
+							</td>
+							<td>
+								<div class="operation">
+									<p><a class="delete" href="#">删除</a></p>
+									<p><a href="#">收藏</a></p>
+								</div>
+							</td>
+						</tr>
+					</table>
+					
+					<!--购物车信息汇总-->
+					<div style="clear: both;"></div>
+					<div class="gather">
+						<h3>已选择<span>5</span>件商品</h3>
+						<table id="gather-tab" border="0" cellspacing="0" cellpadding="0">
+							<tr align="right">
+								<td>商品总额：</td><td>￥<span id="gather-price">0</span></td>
+							</tr>
+							<tr align="right">
+								<td>已优惠：</td><td>￥<span id="sale-price">0</span></td>
+							</tr>
+							<tr align="right">
+								<td>合计金额：</td><td>￥<span id="sum-price">0</span></td>
+							</tr>
+						</table>
+					</div>
+					
+					<!--结算部分-->
+					<div style="clear: both;"></div>
+					<div class="account-container">
+						<div class="acount-operation">
+							<ul>
+								<li>
+									<input type="checkbox" id="" value="" />全选
+								</li>
+								<li>
+									<span class="icon01"></span>
+									<a href="#">删除选中的商品</a>
+								</li>
+								<li>
+									<span class="icon02"></span>
+									<a href="#">清空购物车</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div style="clear: both;"></div>
+		<div id="footer"></div>
+	</body>
+</html>

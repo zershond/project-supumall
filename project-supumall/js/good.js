@@ -91,6 +91,7 @@ $(function(){
 	
 	//点击添加购物车
 	$('#add-mallCar').click(function(event){
+//		商品添加到购物车的动画
 		$('#add-mallCar-img').css({
 			left: '712px',
 			top: '634px',
@@ -101,6 +102,31 @@ $(function(){
 		},function(){
 			$(this).hide()
 		})
+		
+//		设置cookie
+//		将购物信息更新到cookie
+		var count = parseInt($('#count').val());
+		var num = '12138';
+		if($.cookie('mallCar') == null){
+			var goodObj = [{
+				count: count,
+				num: num,
+			}]
+			var info = JSON.stringify(goodObj);
+		}else{
+			var info = $.cookie('mallCar');
+			var goodObj = JSON.parse(info);
+			for(var k in goodObj){
+				if(goodObj[k].num == num){
+					var temp = parseInt(goodObj[k].count);
+					temp += count;
+					goodObj[k].count = temp;
+				}
+			}
+			info = JSON.stringify(goodObj);
+		}
+		//添加到cookie
+		$.cookie('mallCar',info);
 	})
 	
 	//商品详情与评论之间切换
