@@ -86,9 +86,10 @@ div.jqZoomPup{
 	/*height: 480p;*/
 }
 #main-info .good-info{
-	width: 710px;
+	width: 680px;
 	overflow: hidden;
 	float: left;
+	padding-left: 20px;
 }
 .main-info-container {
 	/*width: 1200px;*/

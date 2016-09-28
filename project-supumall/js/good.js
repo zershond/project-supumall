@@ -38,7 +38,13 @@ $(function(){
 	});
 	
 	//加载详情页面
-	$('.more-info-container').load('moreInfo.html');
+	var n = $('.more-info-container').attr('num');
+	if(n == 1){
+		$('.more-info-container').load('moreInfo.html');
+	}else{
+		$('.more-info-container').load('moreInfo2.html');
+	}
+	
 	
 	
 //	放大镜执行函数
@@ -109,9 +115,9 @@ $(function(){
 //		设置cookie json='"aa":"aa"'
 //		将购物信息更新到cookie
 		var count = parseInt($('#count').val());
-		var num = '12138';
+		var num = $(this).attr('num');//'12138',{num: '12139',count: 1,},{num: '12141',count: 1,}
 		if($.cookie('mallCar') == undefined){
-			var goodObj = [{num: '12138',count: 2,},{num: '12140',count: 1,},{num: '12141',count: 1,}];
+			var goodObj = [{num: num,count: count,}];
 			var info = JSON.stringify(goodObj);
 		}else{
 			var info = $.cookie('mallCar');

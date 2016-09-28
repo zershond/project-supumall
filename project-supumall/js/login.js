@@ -2,6 +2,13 @@
 //
 $(function(){
 	
+	//加载脚部
+	$('#footer').load('footer.html',function(){
+		$('.culture-container').hide();
+		$('.footer-nav').hide();
+		$('.footer-info').css('background','#F3F3F3');
+	});
+	
 	//检查cookie，若有，则添加到登录界面
 	checkCookie();
 	

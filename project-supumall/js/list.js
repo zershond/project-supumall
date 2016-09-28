@@ -89,6 +89,8 @@ function getPage(index){
 }
 
 function announce(){
+	
+//	标题升起的特效
 	$('.list-item .title').each(function(){
 		$(this).hover(function(){
 			$(this).stop().animate({top: '195px'})
@@ -96,6 +98,11 @@ function announce(){
 			$(this).stop().animate({top: '210px'})
 		})
 	})
+	
+	$('.list-item img').eq(1).click(function(){
+		window.location.href = 'good2.html';
+	})
+	
 }
 
 
