@@ -34,23 +34,39 @@ $(function(){
 	
 	
 	//加载购物车信息
-	loadMallCar();
+	if($.cookie('mallCar') == undefined){
+		$('#mallCar-table tr:eq(1)').detach();
+	}else{
+		loadMallCar();
+	}
 	
-
 	
+	//删除选中商品
+	$('.acount-operation a').eq(0).click(function(){
+		deleteChecked();
+	})
+	
+	//删除所有商品
+	$('.acount-operation a').eq(1).click(function(){
+		deleteAll();
+	})
 })
 
 
 
 //加载购物车数据的函数
 function loadMallCar(){
-	var obj = [{num: '12138',count: 2,},{num: '12140',count: 1,},{num: '12141',count: 1,}];
-	$.cookie('mallCar',JSON.stringify(obj));
+//	var obj = [{num: '12138',count: 2,},{num: '12140',count: 1,},{num: '12141',count: 1,}];
+//	$.cookie('mallCar',JSON.stringify(obj));
 	var car  = JSON.parse($.cookie('mallCar'));
 	var goodsdata;
+	var len = 0;
+	if(car != null){
+		len = car.length;
+	}
 	$.get('data/goodsInfo.json',function(data){
 		goodsdata = data;
-		for(var i = 0; i < car.length; i++){
+		for(var i = 0; i < len; i++){
 			createTr(car[i].num, car[i].count, goodsdata);
 		}
 		$('#mallCar-table tr:eq(1)').detach();
@@ -66,6 +82,7 @@ function createTr(num, count, data){
 			if(num == data.goods[i].num){
 				var trObj = $('#mallCar-table tr:eq(1)').clone();
 				$('img', trObj).attr('src',data.goods[i].imgSrc);
+				$('img', trObj).attr('id',data.goods[i].num);
 				$('a:eq(0)', trObj).html(data.goods[i].info);
 				$('.price', trObj).html(data.goods[i].price);
 				$('.count-info', trObj).val(count);
@@ -101,8 +118,11 @@ function fn(){
 	$('tr .delete').click(function(){
 		$(this).parent().parent().parent().parent().remove();
 		calculate();
+		var num = $('img', $(this).parent().parent().parent().parent()).attr('id');
+		console.log(num);
+		deleteCookie(num);
 	});
-	
+	//点击选择购物车里面的商品
 	$('#mallCar-table :checkbox').slice(1).click(function(){
 		calculate();
 	});
@@ -114,6 +134,8 @@ function fn(){
 		}
 		calculate();
 	})
+	
+	
 }
 
 //计算购物车小计的函数
@@ -122,15 +144,51 @@ function calculate(){
 	var gatherPrice = 0;
 	var sumPrice = 0;
 	var sale = 1;
+	var counts = 0;
 	for(var i = 0; i < $checked.length; i++){
-		var price = parseFloat($checked.find('.sumPrice').eq(i).html());console.log(price);
+		var price = parseFloat($checked.find('.sumPrice').eq(i).html());
+		var c = parseInt($checked.find('.count-info').eq(i).val());
+		counts += c;
 		gatherPrice += price;
 	}
 	sumPrice = gatherPrice * sale;
 	$('#gather-price', $('#gather-tab')).html(gatherPrice);
 	$('#sum-price',$('#gather-tab')).html(sumPrice);
+	$('#goodSumPrice').html(sumPrice);
+	$('.goodsCount').html(counts)
 }
 
+//删除选中商品的函数
+function deleteChecked(){
+	$checked = $('#mallCar-table input:checked').parent().parent();
+	$checked.each(function(){
+		$(this).find('.delete').trigger('click');
+	})
+}
+
+//删除所有商品
+function deleteAll(){
+	$checked = $('#mallCar-table input').parent().parent();
+	$checked.each(function(){
+		$(this).find('.delete').trigger('click');
+	})
+	deleteCookie(0);
+}
+//删除cookie里面对应商品信息
+function deleteCookie(num){
+	var $cookie = JSON.parse($.cookie('mallCar'));
+	if(num == 0){
+		$.cookie('mallCar','',{expires:-1})
+	}else{
+		for(k in $cookie){
+			if($cookie[k].num == num){
+				$cookie.splice(k,1);
+			}
+		}
+		$.cookie('mallCar',JSON.stringify($cookie))
+		console.log($.cookie('mallCar'));
+	}
+}
 
 
 

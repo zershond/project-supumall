@@ -73,4 +73,27 @@ $(function(){
 		$(this).hide();
 	})
 	
+	//设置购物车数量
+	calculateCount()
+	
 })
+
+function calculateCount(){
+	if($.cookie('mallCar')){console.log('calculate')
+		var car = JSON.parse($.cookie('mallCar'));
+		var count = 0;
+		for(k in car){
+			count += car[k].count;
+		}
+		console.log(count);
+		setMallCarNum(count);
+	}
+	else{
+		setMallCarNum(0);
+	}
+	
+}
+
+function setMallCarNum(num){
+	$('.mallCar-num').html(num);
+}

@@ -177,6 +177,7 @@
 	border: 1px solid #CCCCCC;
 	margin-top: 15px;
 	overflow: hidden;
+	padding: 3px 3px;
 }
 .account-container .acount-operation{
 	float: left;
@@ -201,7 +202,31 @@
 .icon01 a:hover, .icon02 a:hover{
 	color: #e5004a;
 }
-
+.balence{
+	float: right;
+	overflow: hidden;
+}
+.balence ul li{
+	float: left;
+	overflow: hidden;
+	padding-left: 50px;
+	line-height: 33px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.balence span{
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	color: #e5004a;
+}
+#balenceBtn{
+	border: none;
+	background: #e5004a;
+	color: white;
+	padding: 10px 20px;
+	cursor: pointer;
+}
 
 
 

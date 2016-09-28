@@ -32,6 +32,7 @@
 .list-item .title{
 	height: 45px;
 	overflow: hidden;
+	width: 198px;
 	border-top: 1px dashed darkgray;
 	/*border-bottom: 1px dashed darkgray;*/
 	padding-left: 10px;
@@ -42,6 +43,7 @@
 	position: absolute;
 	top: 210px;/*190*/
 	z-index: -10;
+	cursor: pointer;
 }
 .list-item .price{
 	width: 198px;

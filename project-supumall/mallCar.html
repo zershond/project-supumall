@@ -68,7 +68,7 @@
 					<table id="mallCar-table"  cellspacing="0" cellpadding="0">
 						<tr>
 							<td width="40">
-								<input type="checkbox"/>全选
+								<input type="checkbox" checked="checked"/>全选
 							</td>
 							<td>
 								商品信息
@@ -92,7 +92,7 @@
 							</td>
 							<td>
 								<div class="good-info">
-									<img src="img/good/mainImg1.jpg"/>
+									<img src="img/good/mainImg1.jpg" id="12138"/>
 									<a href="#">Karicare可瑞康 新西兰金装奶粉1段0-6个月900g</a>
 								</div>
 								<div class="more-info">
@@ -126,7 +126,7 @@
 					<!--购物车信息汇总-->
 					<div style="clear: both;"></div>
 					<div class="gather">
-						<h3>已选择<span>5</span>件商品</h3>
+						<h3>已选择<span class="goodsCount">0</span>件商品</h3>
 						<table id="gather-tab" border="0" cellspacing="0" cellpadding="0">
 							<tr align="right">
 								<td>商品总额：</td><td>￥<span id="gather-price">0</span></td>
@@ -146,15 +146,26 @@
 						<div class="acount-operation">
 							<ul>
 								<li>
-									<input type="checkbox" id="" value="" />全选
-								</li>
-								<li>
 									<span class="icon01"></span>
 									<a href="#">删除选中的商品</a>
 								</li>
 								<li>
 									<span class="icon02"></span>
 									<a href="#">清空购物车</a>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="balence">
+							<ul>
+								<li>
+									共 <span class="goodsCount">0</span>
+								</li>
+								<li>
+									总计￥<span id="goodSumPrice">0</span>
+								</li>
+								<li>
+									<input type="button" id="balenceBtn" value="去结算 >" />
 								</li>
 							</ul>
 						</div>

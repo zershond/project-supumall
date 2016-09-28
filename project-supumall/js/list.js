@@ -58,9 +58,7 @@ $(function(){
 		getPage(index);
 	})
 	
-	$('.listContainer').hover(function(event){
-		
-	})
+	
 
 	
 	
@@ -86,10 +84,19 @@ function getPage(index){
 				obj.find('.disable').show();
 			}
 		}
+		announce();
 	})
 }
 
-
+function announce(){
+	$('.list-item .title').each(function(){
+		$(this).hover(function(){
+			$(this).stop().animate({top: '195px'})
+		},function(){
+			$(this).stop().animate({top: '210px'})
+		})
+	})
+}
 
 
 function process(){

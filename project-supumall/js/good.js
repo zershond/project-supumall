@@ -27,6 +27,9 @@ $(function(){
 			$('.nav-allClass-menu').hide()
 		})
 		
+		//设置购物车数量
+		calculateCount()
+		
 	});
 	
 	//加载脚部
@@ -103,30 +106,34 @@ $(function(){
 			$(this).hide()
 		})
 		
-//		设置cookie
+//		设置cookie json='"aa":"aa"'
 //		将购物信息更新到cookie
 		var count = parseInt($('#count').val());
 		var num = '12138';
-		if($.cookie('mallCar') == null){
-			var goodObj = [{
-				count: count,
-				num: num,
-			}]
+		if($.cookie('mallCar') == undefined){
+			var goodObj = [{num: '12138',count: 2,},{num: '12140',count: 1,},{num: '12141',count: 1,}];
 			var info = JSON.stringify(goodObj);
 		}else{
 			var info = $.cookie('mallCar');
 			var goodObj = JSON.parse(info);
+			var check = false;
 			for(var k in goodObj){
 				if(goodObj[k].num == num){
 					var temp = parseInt(goodObj[k].count);
 					temp += count;
 					goodObj[k].count = temp;
+					check = true;
 				}
+			}
+			if(!check){
+				var o = {num: '12138',count: 2,};
+				goodObj.push(o);
 			}
 			info = JSON.stringify(goodObj);
 		}
 		//添加到cookie
 		$.cookie('mallCar',info);
+		calculateCount();
 	})
 	
 	//商品详情与评论之间切换
@@ -141,7 +148,7 @@ $(function(){
 	
 })
 
-	//滚动条滚动时
+//滚动条滚动时
 $(window).scroll(function(){
 	var top = $(window).scrollTop();
 	if(top >= 950){
@@ -160,10 +167,24 @@ $(window).scroll(function(){
 
 function process(){
 	var account = $.cookie('account');
-	//Hi 130*****331 欢迎来到速普商城！ [ 退出 ] 
 	var str = 'hi  <a href="#">';
 	str = str + account + '</a> 欢迎来到速普商城！ [ <a id="quit" href="#">退出</a> ]';
 	$('.header-title span').eq(0).html(str);
 }
 
+function calculateCount(){
+	if($.cookie('mallCar')){console.log('calculate')
+		var car = JSON.parse($.cookie('mallCar'));
+		var count = 0;
+		for(k in car){
+			count += car[k].count;
+		}
+		console.log(count);
+		setMallCarNum(count);
+	}
+	else{
+		setMallCarNum(0);
+	}
+	
+}
 
