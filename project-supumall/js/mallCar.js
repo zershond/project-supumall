@@ -126,6 +126,7 @@ function fn(){
 	//点击选择购物车里面的商品
 	$('#mallCar-table :checkbox').slice(1).click(function(){
 		calculate();
+		checkedAll();
 	});
 	$('#mallCar-table :checkbox').eq(0).click(function(){
 		if(this.checked){
@@ -191,6 +192,16 @@ function deleteCookie(num){
 	}
 }
 
+//
+function checkedAll(){
+	var checkedAll = true;
+	for (var i = 0; i < $('#mallCar-table :checkbox').slice(1).length; i++) {
+		if(!$('#mallCar-table :checkbox').slice(1).eq(i).checked){
+			checkedAll = false;
+		}
+	};
+	$('#mallCar-table :checkbox').eq(0).prop('checked',false);
+}
 
 
 function process(){

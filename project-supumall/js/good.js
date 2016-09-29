@@ -1,4 +1,4 @@
-﻿
+
 
 $(function(){
 	
@@ -69,8 +69,6 @@ $(function(){
 				var optionObj = $('#city option:eq(0)').clone();
 				$(optionObj).val(data.city[province][i]).html(data.city[province][i]).appendTo('#city');				
 			}
-			
-			
 		},'json');
 		if(province == '西藏自治区'){
 			$('#freightCount').html('该地区不能免运费    按正常快递收费');
