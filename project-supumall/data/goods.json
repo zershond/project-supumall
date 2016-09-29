@@ -1,0 +1,26 @@
+{
+	"goods":[
+		{"num":"12138",
+		"title":"新西兰直供 杭州保税区二号仓发货",
+		"detail":"可瑞康KaricareKaricare是全球母婴营养专家Nutricia旗下著名婴幼儿奶粉品牌，原产地新西兰，众所周知，新西兰气候宜人，阳光充足，生态环境非常好，畜牧业全部是以放养方式，不会导致奶粉中含有激素或转基因等不利于宝宝健康生长发育的成份。可以说为宝宝成长提供最佳的营养支持！",
+		"info":"Karicare可瑞康 新西兰金装奶粉1段0-6个月900g","price":"165",
+		"imgSrc":"img/good/mainImg1.jpg",
+		"small":["img/good/mainImg1.jpg","img/good/mainImg2.jpg","img/good/mainImg3.jpg","img/good/mainImg4.jpg"],
+		"moreInfo":"moreInfo.html"},
+		{"num":"12139",
+		"title":"速普自营仓发货",
+		"detail":"乐鲜，原料配比科学，鳕鱼肉原产于美国，其丰富的蛋白质，促进宝宝身体发育。澳大利亚产奶酪，口感细腻，适于宝宝咀嚼。营养均衡，比牛奶提供更多的营养。",
+		"info":"乐鲜 韩国原装进口高级牛奶奶酪鳕鱼肠90g","price":"8.5",
+		"imgSrc":"img/good2/mainImg1.jpg",
+		"small":["img/good2/mainImg1.jpg","img/good2/mainImg2.jpg","img/good2/mainImg3.jpg","img/good2/mainImg4.jpg"],
+		"moreInfo":"moreInfo2.html"},
+		{"num":"12140",
+		"title":"速普自营仓发货",
+		"detail":"亨氏是知名的婴幼儿辅食品牌，对于没有太多闲暇时间做辅食的麻麻，亨氏的宝宝辅食是很好的选择。亨氏由专业的营养师配制的健康低盐配方，无添加任何色素、香料和防腐剂，采用当季新鲜的谷物和蔬菜精致而成，多种蔬菜科学搭配，富含蛋白质、纤维等营养素，促进宝宝肠内益生菌的发育，锻炼宝宝的消化能力。",
+		"info":"Heinz亨氏 乐维滋蔬乐2+2果汁泥苹果蓝莓紫胡萝卜紫薯120g","price":"8.5",
+		"imgSrc":"img/good3/mainImg1.jpg",
+		"small":["img/good3/mainImg1.jpg","img/good3/mainImg2.jpg","img/good3/mainImg3.jpg","img/good3/mainImg4.jpg"],
+		"moreInfo":"moreInfo2.html"},
+		{"num":"12141","info":"Heinz亨氏 乐维滋蔬乐2+2果汁泥苹果蓝莓","price":"3.9","imgSrc":"img/list/list1-3.jpg"}
+	]
+}

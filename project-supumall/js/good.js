@@ -31,20 +31,15 @@ $(function(){
 		calculateCount()
 		
 	});
+
+	setThisGood()
 	
 	//加载脚部
 	$('#footer').load('footer.html',function(data){
 		$(this).html(data);
 	});
 	
-	//加载详情页面
-	var n = $('.more-info-container').attr('num');
-	if(n == 1){
-		$('.more-info-container').load('moreInfo.html');
-	}else{
-		$('.more-info-container').load('moreInfo2.html');
-	}
-	
+
 	
 	
 //	放大镜执行函数
@@ -115,11 +110,12 @@ $(function(){
 //		设置cookie json='"aa":"aa"'
 //		将购物信息更新到cookie
 		var count = parseInt($('#count').val());
-		var num = $(this).attr('num');//'12138',{num: '12139',count: 1,},{num: '12141',count: 1,}
-		if($.cookie('mallCar') == undefined){
+		var num = $(this).attr('num');
+		if($.cookie('mallCar') == undefined){console.log('cookie unexit')
 			var goodObj = [{num: num,count: count,}];
 			var info = JSON.stringify(goodObj);
-		}else{
+		}
+		else{console.log('cookie exit')
 			var info = $.cookie('mallCar');
 			var goodObj = JSON.parse(info);
 			var check = false;
@@ -132,13 +128,14 @@ $(function(){
 				}
 			}
 			if(!check){
-				var o = {num: '12138',count: 2,};
+				var o = {num: num,count: count,};
 				goodObj.push(o);
 			}
 			info = JSON.stringify(goodObj);
 		}
 		//添加到cookie
 		$.cookie('mallCar',info);
+		//console.log($.cookie('mallCar'))
 		calculateCount();
 	})
 	
@@ -153,6 +150,57 @@ $(function(){
 	
 	
 })
+
+
+//获取本次页面详情信息
+function setThisGood(){
+	var _url = window.location.href.split('?');
+	var _url1 = _url[1].split('=')
+	var num = _url1[1];
+	//main-img>img smallImg>img
+	// $('.main-img .bigPic img').attr('src',num);
+	$.get('data/goods.json',function(data){
+		//console.log(data);
+		for(k in data.goods){
+			if(num == data.goods[k].num){
+				setImgSrc(data.goods[k]);
+				setInfo(data.goods[k]);
+			}
+		}
+	})
+}
+
+// 设置详情页图片
+function setImgSrc(obj){
+	var _src = obj.imgSrc;
+	var _price = obj.price;
+	$('.main-img .bigPic img').attr('src',_src);
+	$('.main-img .bigPic img').attr('jqimg',_src);
+	for(var i = 0; i < 4; i++){
+		$('.smallImg img').eq(i).attr('src',obj.small[i]);
+	}
+}
+//设置详情页其他信息
+function setInfo(obj){
+	var _info = obj.info;
+	var _title = obj.title;
+	var _detail = obj.detail;
+	$('.info-title').html(_title);
+	$('.detail-info h3').html(_info);
+	$('.detail-info p').html(_detail);
+	$('#add-mallCar').attr('num',obj.num);
+	$('.more-info-title li').eq(0).attr('a',obj.moreInfo);
+	$('.more-info-container').attr('_src',obj.moreInfo)
+	loadMoreInfo();
+}
+//加载详情页面
+function loadMoreInfo(){
+	//加载详情页面
+	var _src = $('.more-info-container').attr('_src');
+	console.log(_src)
+	$('.more-info-container').load(_src);
+}
+
 
 //滚动条滚动时
 $(window).scroll(function(){

@@ -100,7 +100,10 @@ function announce(){
 	})
 	
 	$('.list-item img').eq(1).click(function(){
-		window.location.href = 'good2.html';
+		window.location.href = 'good.html?num=12139';
+	})
+	$('.list-item img').eq(2).click(function(){
+		window.location.href = 'good.html?num=12140';
 	})
 	
 }

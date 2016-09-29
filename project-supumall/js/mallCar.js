@@ -10,6 +10,7 @@ $(function(){
 		$('#search-container').hide();
 		$('#bigbox').hide();
 		
+		//头部显示登录用户信息
 		if($.cookie('autologin') == '1'){
 			process();
 		}
@@ -193,8 +194,8 @@ function deleteCookie(num){
 
 
 function process(){
+	//获取cookie
 	var account = $.cookie('account');
-	//Hi 130*****331 欢迎来到速普商城！ [ 退出 ] 
 	var str = 'hi  <a href="#">';
 	str = str + account + '</a> 欢迎来到速普商城！ [ <a id="quit" href="#">退出</a> ]';
 	$('.header-title span').eq(0).html(str);
