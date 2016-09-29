@@ -32,6 +32,7 @@ $(function(){
 		
 	});
 
+	//加载本次页面商品信息
 	setThisGood()
 	
 	//加载脚部
@@ -226,8 +227,9 @@ function process(){
 	$('.header-title span').eq(0).html(str);
 }
 
+//计算购物车里面商品数量
 function calculateCount(){
-	if($.cookie('mallCar')){console.log('calculate')
+	if($.cookie('mallCar')){
 		var car = JSON.parse($.cookie('mallCar'));
 		var count = 0;
 		for(k in car){
